@@ -11,22 +11,29 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
 module.exports = {
   siteMetadata: {
     menu: [
-      { name: "Home", to: "/" },
-      { name: "About", to: "/about" },
+      { name: "Work", to: "/" },
+      { name: "About + Contact", to: "/about" },
     ],
     links: {
-      facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
-      pinterest: "https://pinterest.com/",
-      twitter: "https://twitter.com/",
+      linkedin: "https://www.linkedin.com/in/tayloranderson1/",
+      github: "https://github.com/tayanderson",
     },
     locale: "en",
-    title: `John Doe`,
-    description: `Photography portfolio of John Doe`,
-    author: `@johndoe`,
+    title: `Taylor Anderson`,
+    description: `Web Designer & Front-end Developer based in Chicago, IL.`,
+    author: `Taylor Anderson`,
   },
   plugins: [
-    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require('tailwindcss'),
+          require('postcss-nested'),
+          require('autoprefixer'),
+        ]
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-contentful`,
@@ -44,13 +51,8 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: "gatsby-plugin-mailchimp",
-      options: {
-        endpoint: process.env.MAILCHIMP_ENDPOINT,
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -58,10 +60,11 @@ module.exports = {
         short_name: `johndoe`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#3182ce`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`,
+        icon: "src/images/logo.png"
       },
     },
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-scroll-reveal`,
   ],
 }

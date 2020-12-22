@@ -1,17 +1,19 @@
 import React from "react"
+import VisibilitySensor from "./VisibilitySensor";
 
 const Hero = () => (
-  <div className="container py-12 lg:pb-16">
-    <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-gray-900">
-      Hello, I'm John{" "}
-      <span role="img" aria-label="waving hand">
-        👋
-      </span>
-      <br />
-      <span className="text-blue-600">
-        Welcome to my photography portfolio.
-      </span>
-    </h2>
+  <div className="container py-12 lg:py-32">
+    <VisibilitySensor partialVisibility once>
+      {({ isVisible }) => (
+        <div
+          className={isVisible ? "slideDown enter" : "slideDown"}
+        >
+        <h1 className="w-2/3" data-sal="fade" data-sal-easing="ease">
+            <span className="text-3xl sm:text-5xl font-bold leading-tight tracking-tight text-gray-800 block">Designer & Front-end Developer based in Chicago, IL.</span>
+        </h1>
+      </div>
+    )}
+  </VisibilitySensor>
   </div>
 )
 

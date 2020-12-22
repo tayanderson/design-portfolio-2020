@@ -1,12 +1,38 @@
 @tailwind base;
 
-body {
-  @apply .bg-white .font-sans .antialiased;
-}
-
 @tailwind components;
 
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white font-body antialiased;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .arrow-link {
+    @apply text-base border-b-2 pb-2 border-gray-700 text-gray-700 transition-all duration-150 ease-in-out bg-transparent no-underline whitespace-no-wrap font-semibold tracking-wide;
+
+    &:after {
+      @apply relative inline-block align-middle transition-all duration-150 ease-in-out;
+      bottom: 0.2ex;
+      margin-left: 10px;
+      content: "\2794";
+    }
+
+    &:hover {
+      @apply text-gray-500 border-transparent;
+    }
+
+    &:hover:after {
+      transform: translateX(5px);
+    }
+  }
+}
 
 .container {
   @apply .max-w-screen-xl .mx-auto .px-4;
@@ -21,5 +47,94 @@ body {
 @screen lg {
   .container {
     @apply .px-8;
+  }
+}
+
+#navbar {
+  backdrop-filter: blur(6px);
+}
+
+.portfolio-item.small, .portfolio-item.medium, .portfolio-item.large, .portfolio-item.tall, .portfolio-item.wide {
+  grid-column: span 1;
+}
+
+@screen md {
+  .portfolio-item {
+    &.small {
+      grid-row: span 1;
+      grid-column: span 1;
+    }
+
+    &.medium {
+      grid-row: span 2;
+      grid-column: span 2;
+    }
+
+    &.large {
+      grid-row: span 3;
+      grid-column: span 3;
+    }
+
+    &.tall {
+      grid-row: span 3;
+      grid-column: span 2;
+    }
+
+    &.wide {
+      grid-row: span 2;
+      grid-column: span 3;
+    }
+  }
+}
+
+.portfolio-item {
+  .gatsby-image-wrapper {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  &:hover .gatsby-image-wrapper {
+    @apply transition-all duration-300 ease-in-out shadow-xl;
+    transform: translateY(-10px);
+
+  }
+}
+
+.prose {
+  @apply mx-auto max-w-screen-md;
+}
+
+.role-list li:not(:last-child)::after {
+  content: ","
+}
+
+.role-list li:not(:first-child) {
+  @apply ml-1;
+}
+
+.fadeIn {
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+.fadeIn.enter {
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.slideDown {
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10%);
+}
+.slideDown.enter {
+  transition: opacity 1s ease-in-out, transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (print), (prefers-reduced-motion: reduce) {
+  .fadeIn {
+    transition: none;
+    opacity: 1;
+    transform: none;
   }
 }

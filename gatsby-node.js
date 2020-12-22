@@ -32,6 +32,11 @@ exports.createPages = ({ graphql, actions }) => {
             slug
           }
         }
+        pages: allContentfulPage {
+          nodes {
+            slug
+          }
+        }
       }
     `).then(({ errors, data }) => {
       if (errors) {
@@ -41,6 +46,17 @@ exports.createPages = ({ graphql, actions }) => {
       if (data && data.portfolio) {
         const component = path.resolve("./src/templates/portfolio-item.jsx")
         data.portfolio.nodes.map(({ slug }) => {
+          createPage({
+            path: `/${slug}`,
+            component,
+            context: { slug },
+          })
+        })
+      }
+
+      if (data && data.pages) {
+        const component = path.resolve("./src/templates/page.jsx")
+        data.pages.nodes.map(({ slug }) => {
           createPage({
             path: `/${slug}`,
             component,
