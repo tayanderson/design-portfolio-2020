@@ -49,7 +49,7 @@ function ContactPage() {
                     rows="8"
                   />
 
-                  <button className="px-4 py-2 font-bold text-white text-xl bg-gray-800 hover:bg-gray-600 transition duration-150 ease-in-out">
+                <button className="px-4 py-2 font-bold text-white text-xl bg-gray-800 hover:bg-gray-600 transition duration-150 ease-in-out focus:outline-black">
                     Submit
                   </button>
                 </form>
