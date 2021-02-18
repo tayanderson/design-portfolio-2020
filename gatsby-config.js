@@ -12,7 +12,8 @@ module.exports = {
   siteMetadata: {
     menu: [
       { name: "Work", to: "/" },
-      { name: "About + Contact", to: "/about" },
+      { name: "About", to: "/about" },
+      { name: "Contact", to: "/contact" },
     ],
     links: {
       linkedin: "https://www.linkedin.com/in/tayloranderson1/",
