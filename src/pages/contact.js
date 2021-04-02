@@ -19,7 +19,7 @@ function ContactPage() {
                   Contact
                 </h1>
 
-                <form className="mx-auto w-full" method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+                <form className="mx-auto w-full" method="post" netlify-honeypot="bot-field" name="contact" netlify>
                   <input type="hidden" name="bot-field" />
                   <input type="hidden" name="form-name" value="contact" />
 
@@ -38,6 +38,19 @@ function ContactPage() {
 
                   <label
                     className="block mb-2 font-bold text-gray-800 text-xl p-2"
+                    htmlFor="email"
+                  >
+                    Email Address
+                  </label>
+
+                  <input
+                    className="w-full mb-6 form-input p-2 focus:outline-black"
+                    id="email"
+                    type="email"
+                  />
+
+                  <label
+                    className="block mb-2 font-bold text-gray-800 text-xl p-2"
                     htmlFor="message"
                   >
                     Message
@@ -49,9 +62,7 @@ function ContactPage() {
                     rows="8"
                   />
 
-                <button className="px-4 py-2 font-bold text-white text-xl bg-gray-800 hover:bg-gray-600 transition duration-150 ease-in-out focus:outline-black">
-                    Submit
-                  </button>
+                <input value="Send Message" type="Submit" className="px-4 py-2 font-bold text-white text-xl bg-gray-800 hover:bg-gray-600 transition duration-150 ease-in-out focus:outline-black" />
                 </form>
               </div>
               )}

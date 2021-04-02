@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
     <>
       <div className="flex flex-col min-h-screen bg-gray-100">
         <Header />
-        <div className="flex-1">
+        <div className="flex-1 pt-24">
           {children}
         </div>
         <Footer />

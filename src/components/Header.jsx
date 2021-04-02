@@ -47,7 +47,7 @@ const Header = () => {
   }
 
   return (
-    <nav id="navbar" className="sticky transition-all duration-500 ease-in-out bg-gray-100 z-50 bg-opacity-90">
+    <nav id="navbar" className="fixed transition-all duration-500 ease-in-out bg-gray-100 z-50 bg-opacity-90 w-full">
       <div className="container pt-6 pb-8 md:pt-8">
       <div className="flex justify-between items-center">
         <Link to="/" className="font-bold text-gray-800">
