@@ -2,7 +2,7 @@
   "name": "gatsby-contentful-portfolio",
   "description": "Portfolio theme for GatsbyJS",
   "version": "1.0.0",
-  "author": "Wojciech Kocjan <wojciech@kocjan.net>",
+  "author": "Taylor Anderson",
   "dependencies": {
     "@tailwindcss/custom-forms": "0.2.1",
     "@tailwindcss/typography": "^0.3.1",
@@ -17,6 +17,7 @@
     "gatsby": "^2.32.3",
     "gatsby-background-image": "^1.2.0",
     "gatsby-image": "^2.5.0",
+    "gatsby-plugin-google-gtag": "^3.2.0",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^2.6.0",
     "gatsby-plugin-postcss": "^3.1.0",
