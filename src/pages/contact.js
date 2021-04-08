@@ -10,7 +10,7 @@ function ContactPage() {
       <div className="bg-gray-0 py-12 lg:py-16">
         <div className="container">
 
-          <VisibilitySensor once>
+          <VisibilitySensor partialVisibility once>
             {({ isVisible }) => (
               <div
                 className={isVisible ? "slideDown enter max-w-screen-md mx-auto mb-16" : "slideDown max-w-screen-md mx-auto mb-16"}

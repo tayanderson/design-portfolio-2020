@@ -19,7 +19,7 @@ const PageTemplate = ({ data }) => {
         <div className="container py-12 lg:pb-16">
           <div className="w-full md:w-1/2 xl:w-3/5 pb-8 md:pb-0">
 
-            <VisibilitySensor once>
+            <VisibilitySensor partialVisibility once>
               {({ isVisible }) => (
                 <div
                   className={isVisible ? "slideDown enter" : "slideDown"}
