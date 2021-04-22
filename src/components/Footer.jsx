@@ -30,7 +30,7 @@ const Footer = () => {
         </ul>
         <div className="mt-8 md:mt-0 md:order-1">
           <p className="text-center text-sm md:text-base text-gray-600">
-            &copy; 2020 {title}. All rights reserved.
+            &copy; {new Date().getFullYear()} {title}. All rights reserved.
           </p>
         </div>
       </div>
