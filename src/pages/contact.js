@@ -21,7 +21,7 @@ function ContactPage() {
 
                 <form className="mx-auto w-full" method="post" netlify-honeypot="bot-field" name="contact" data-netlify="true">
                   <input type="hidden" name="bot-field" />
-                  <input type="hidden" name="contact" value="contact" />
+                  <input type="hidden" name="form-name" value="contact" />
 
                   <label
                     className="block mb-2 font-bold text-gray-800 text-xl"
