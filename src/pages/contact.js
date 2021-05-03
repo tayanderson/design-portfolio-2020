@@ -19,7 +19,14 @@ function ContactPage() {
                   Contact
                 </h1>
 
-                <form className="mx-auto w-full" method="post" netlify-honeypot="bot-field" name="contact" data-netlify="true">
+                <form
+                  className="mx-auto w-full"
+                  method="post"
+                  netlify-honeypot="bot-field"
+                  name="contact"
+                  data-netlify="true"
+                  action="/thank-you"
+                  >
                   <input type="hidden" name="bot-field" />
                   <input type="hidden" name="form-name" value="contact" />
 
