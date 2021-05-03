@@ -34,6 +34,7 @@ function ContactPage() {
                     className="w-full mb-6 form-input p-2 focus:outline-black"
                     id="name"
                     type="text"
+                    name="name"
                   />
 
                   <label
@@ -47,6 +48,7 @@ function ContactPage() {
                     className="w-full mb-6 form-input p-2 focus:outline-black"
                     id="email"
                     type="email"
+                    name="email"
                   />
 
                   <label
@@ -60,6 +62,7 @@ function ContactPage() {
                     className="w-full mb-6 form-textarea focus:outline-black p-2"
                     id="message"
                     rows="8"
+                    name="message"
                   />
 
                 <input value="Send Message" type="Submit" className="px-4 py-2 font-bold text-white text-xl bg-gray-800 hover:bg-gray-600 transition duration-150 ease-in-out focus:outline-black" />
