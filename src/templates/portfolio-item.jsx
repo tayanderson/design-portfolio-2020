@@ -58,7 +58,7 @@ export default props => {
                 )}
                 {url && (
                   <div className="mt-8">
-                    <a href={url} className="arrow-link">View Project</a>
+                    <a href={url} className="arrow-link" target="_blank">View Project</a>
                   </div>
                 )}
               </div>
